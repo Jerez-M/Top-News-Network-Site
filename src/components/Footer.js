@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 function Footer() {
   return (
     <>
-        <footer className="bg-dark text-light py-4 mt-1">
-            <div className="container">
+        <footer className="bg-light bg-dark-subtle shadow text-muted small py-4 mt-1">
+            <div className="container"> 
                 <div className="row">
-                <div className="col-lg-4 col-md-6 mb-4 border border-1 rounded mx-1">
+                <div className="col-lg-4 col-md-6 mb-4 mx-1">
                     <h5>About Us</h5>
-                    <p>
+                    <p className=''>
                     Top News Network is a leading global news company committed to delivering comprehensive and up-to-date news 
                     coverage from around the world. With an unwavering focus on accuracy, integrity, and journalistic excellence, we strive 
                     to provide our audience with a diverse range of news stories, spanning politics, business, technology, science,
                     entertainment, sports, and more.
                     </p>
                 </div>
-                <div className="col-lg-3 col-md-5 mb-3 border border-1 rounded mx-1">
+                <div className="col-lg-3 col-md-5 mb-3 mx-1">
                     <h5>Quick Links</h5>
                     <ul className="list-unstyled">
                     <li className="nav-item px-2">
@@ -36,7 +36,7 @@ function Footer() {
                     </li>
                     </ul>
                 </div>
-                <div className="col-lg-4 col-md-6 mb-4 border border-1 rounded mx-1">
+                <div className="col-lg-4 col-md-6 mb-4 mx-1">
                     <h5>Contact Us</h5>
                     <p>2882 Bluffhill, Westgate, Harare, Zimbabwe</p>
                     <p>Email: jjmuchazondida@gmail.com</p>

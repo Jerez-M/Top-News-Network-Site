@@ -1,12 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from ".././assets/TNN_LOGO.png"
+import axios from 'axios';
+
 
 const Nav = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [apiKey, setApiKey] = useState('056949d1e59b4c0a8ac6567a03382f10');
+  const [searchResponse, setSearchResponse] = useState([]);
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(`https://newsapi.org/v2/everything?q=${searchQuery}&apiKey=${apiKey}`) 
+      setSearchResponse(response.data)
+      console.log("The search results are: ", response.data)
+    } catch (error) {
+      alert("Network Error")
+    }
+    setSearchQuery('')
+
+  }
+  console.log("searchResponse: ", searchResponse)
 
   return (
     <>
-      <header className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <header className="navbar navbar-expand-lg bg-dark-subtle fixed-top">
         <div className="container">
         <Link className="navbar-brand" to="/">
           <img src={logo} width={75} height={75} alt="TNN" className="navbar-logo img-fluid" />
@@ -52,10 +71,12 @@ const Nav = () => {
             </ul>
           </div>
           <div className='d-flex flex-end ml-5 pl-5'>
-            <form className="d-flex ml-5 pl-5">
+            <form className="d-flex ml-5 pl-5" onSubmit={handleSubmit}>
               <input
-                className="form-control px-5 me-2"
-                type="search"
+                className="form-control pr-5 me-2"
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search..."
                 aria-label="Search"
               />

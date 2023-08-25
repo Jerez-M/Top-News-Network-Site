@@ -9,14 +9,16 @@ import Footer from './Footer'
 const Body = (props) => {
     useEffect(() => {
         // fetchNewsData();
-    }, [props.newsName]);
+    }, [props.newsName, props.searchResponse]);
   return (
     <>
       <Nav/>
       <div className='mt-5 pt-5'>
       </div>
-      <SecondNav/>
-      <News newsName = {props.newsName}/>
+      <div className='container'>
+        <SecondNav/>
+      </div>
+      <News newsName = {props.newsName} searchResponse = {props.searchResponse}/>
       <Footer/>
     </>
   );
