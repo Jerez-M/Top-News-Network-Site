@@ -28,20 +28,9 @@ const Nav = () => {
       <header className="navbar navbar-expand-lg bg-dark-subtle fixed-top">
         <div className="container">
         <Link className="navbar-brand" to="/">
-          <img src={logo} width={75} height={75} alt="TNN" className="navbar-logo img-fluid" />
-          {/* <span className="ml-3 text-xl">News</span> */}
+          <img src={logo} width={95} height={95} alt="TNN" className="navbar-logo img-fluid" />
         </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+         
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item px-2">
