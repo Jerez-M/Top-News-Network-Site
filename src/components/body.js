@@ -18,7 +18,7 @@ const Body = (props) => {
       <div className='container'>
         <SecondNav/>
       </div>
-      <News newsName = {props.newsName} searchResponse = {props.searchResponse}/>
+      <News newsName = {props.newsName}/>
       <Footer/>
     </>
   );
