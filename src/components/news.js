@@ -23,6 +23,9 @@ const News = (props) => {
         // `https://newsapi.org/v2/top-headlines?q=${props.newsName}&apiKey=${apiKey}`
         );
       const data = await res.json();
+      if (data?.totalResults == 0){
+        alert("No Results Returned")
+      }
       if(data?.status === 'ok') {
         document.querySelector('#loader').classList.remove('spinner-border')
         document.querySelector('#loader').classList.add('d-none')
