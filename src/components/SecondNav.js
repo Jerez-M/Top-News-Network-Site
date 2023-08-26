@@ -12,17 +12,6 @@ const SecondNav  = () => {
                     {/* <img src={logo} width={75} height={75} alt="TNN" className="navbar-logo img-fluid" /> */}
                     <span className="ml-3 display-5 fw-bold">TNN NEWS</span>
                     </Link>
-                    {/* <button
-                        className="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span className="navbar-toggler-icon"></span>
-                    </button> */}
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item px-2 px-1 mx-1">

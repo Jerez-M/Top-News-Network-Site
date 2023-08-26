@@ -12,13 +12,13 @@ const Body = (props) => {
     }, [props.newsName, props.searchResponse]);
   return (
     <>
-      <Nav/>
-      <div className='mt-5 pt-5'>
+      <div className="container mt-2 pt-1">
+        <Nav/>
       </div>
-      <div className='container'>
+      <div className='container mt-5 pt-5'>
         <SecondNav/>
       </div>
-      <News newsName = {props.newsName} searchResponse = {props.searchResponse}/>
+      <News newsName = {props.newsName}/>
       <Footer/>
     </>
   );
